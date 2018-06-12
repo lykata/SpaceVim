@@ -113,6 +113,14 @@ function! SpaceVim#mapping#gd() abort
   endif
 endfunction
 
+function! SpaceVim#mapping#gc() abort
+  if !empty(SpaceVim#mapping#gc#get())
+    call call(SpaceVim#mapping#gc#get(), [])
+  else
+    normal! gc
+  endif
+endfunction
+
 function! SpaceVim#mapping#clearBuffers() abort
   if confirm('Kill all other buffers?', "&Yes\n&No\n&Cancel") == 1
     let blisted = filter(range(1, bufnr('$')), 'buflisted(v:val)')

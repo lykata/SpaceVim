@@ -108,6 +108,8 @@ function! SpaceVim#mapping#g#init() abort
     nnoremap g<c-]> g<c-]>
     let g:_spacevim_mappings_g['d'] = ['call SpaceVim#mapping#gd()', 'goto definition']
     call SpaceVim#mapping#def('nnoremap <silent>', 'gd', ':call SpaceVim#mapping#gd()<CR>', 'Goto declaration', '')
+    let g:_spacevim_mappings_g['c'] = ['call SpaceVim#mapping#gc()', 'goto definition']
+    call SpaceVim#mapping#def('nnoremap <silent>', 'gc', ':call SpaceVim#mapping#gc()<CR>', 'Goto references', '')
 
 
 endfunction

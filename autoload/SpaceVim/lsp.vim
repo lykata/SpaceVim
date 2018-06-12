@@ -25,6 +25,10 @@ if has('nvim')
   function! SpaceVim#lsp#rename() abort
     call LanguageClient_textDocument_rename()
   endfunction
+
+  function! SpaceVim#lsp#references() abort
+    call LanguageClient_textDocument_references()
+  endfunction
 else
   " use vim-lsp
   function! SpaceVim#lsp#reg_server(ft, cmds) abort
